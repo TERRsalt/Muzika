@@ -3,10 +3,10 @@
 # Muzika
 Play your music elegantly.
 
-<img src="https://gitlab.gnome.org/TERRsalt/screenshots/-/raw/main/muzika/window.png" width="1134"/>
-<img src="https://gitlab.gnome.org/TERRsalt/screenshots/-/raw/main/muzika/albums.png" width="1134"/>
-<img src="https://gitlab.gnome.org/TERRsalt/screenshots/-/raw/main/muzika/playing.png" width="462"/>
-<img src="https://gitlab.gnome.org/TERRsalt/screenshots/-/raw/main/muzika/playlist.png" width="466"/>
+<img src="https://github.com/TERRsalt/screenshots/-/raw/main/muzika/window.png" width="1134"/>
+<img src="https://github.com/TERRsalt/screenshots/-/raw/main/muzika/albums.png" width="1134"/>
+<img src="https://github.com/TERRsalt/screenshots/-/raw/main/muzika/playing.png" width="462"/>
+<img src="https://github.com/TERRsalt/screenshots/-/raw/main/muzika/playlist.png" width="466"/>
 
 Muzika (AKA: Muzika) is a light weight music player written in GTK4, focuses on large music collection.
 
@@ -26,7 +26,7 @@ Muzika (AKA: Muzika) is a light weight music player written in GTK4, focuses on 
 - Supports MPRIS control.
 
 ## Install from Flathub
-<a href="https://flathub.org/apps/com.github.TERRsalt.muzika">
+<a href="https://flathub.org/apps/com.github.TERRsalt.Muzika">
 <img src="https://flathub.org/assets/badges/flathub-badge-en.png" width="240"/></a>
 
 ## Install from Snapcraft (unofficial)
@@ -51,4 +51,4 @@ It is written in Vala, simple and clean code, with few third-party dependencies:
     `meson install -C build`
 
 ## Change Log
-Check the [release tags](https://gitlab.gnome.org/TERRsalt/muzika/-/tags) for change log.
+Check the [release tags](https://github.com/TERRsalt/Muzika/-/tags) for change log.

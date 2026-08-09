@@ -11,8 +11,8 @@
     </developer>
     <update_contact>TERRsalt@outlook.com</update_contact>
 
-    <url type="homepage">https://gitlab.gnome.org/TERRsalt/muzika</url>
-    <url type="bugtracker">https://gitlab.gnome.org/TERRsalt/muzika/issues</url>
+    <url type="homepage">https://github.com/TERRsalt/Muzika</url>
+    <url type="bugtracker">https://github.com/TERRsalt/Muzika/issues</url>
     <url type="translate">https://l10n.gnome.org/module/muzika</url>
 
     <launchable type="desktop-id">@app_id@.desktop</launchable>
@@ -48,19 +48,19 @@
     <screenshots>
         <screenshot type="default">
             <caption>Main window</caption>
-            <image>https://gitlab.gnome.org/TERRsalt/screenshots/-/raw/main/muzika/window.png</image>
+            <image>https://github.com/TERRsalt/screenshots/-/raw/main/muzika/window.png</image>
         </screenshot>
         <screenshot>
             <caption>Albums view</caption>
-            <image>https://gitlab.gnome.org/TERRsalt/screenshots/-/raw/main/muzika/albums.png</image>
+            <image>https://github.com/TERRsalt/screenshots/-/raw/main/muzika/albums.png</image>
         </screenshot>
         <screenshot>
             <caption>Playing view</caption>
-            <image>https://gitlab.gnome.org/TERRsalt/screenshots/-/raw/main/muzika/playing.png</image>
+            <image>https://github.com/TERRsalt/screenshots/-/raw/main/muzika/playing.png</image>
         </screenshot>
         <screenshot>
             <caption>Playlist view</caption>
-            <image>https://gitlab.gnome.org/TERRsalt/screenshots/-/raw/main/muzika/playlist.png</image>
+            <image>https://github.com/TERRsalt/screenshots/-/raw/main/muzika/playlist.png</image>
         </screenshot>
     </screenshots>
 

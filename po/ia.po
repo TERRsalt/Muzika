@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: g4music master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/neithern/g4music/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/TERRsalt/Muzika/issues\n"
 "POT-Creation-Date: 2025-09-11 07:33+0000\n"
 "PO-Revision-Date: 2025-09-23 16:19-0300\n"
 "Last-Translator: Emilio Sepúlveda <emism.translations@gmail.com>\n"

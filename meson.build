@@ -4,7 +4,7 @@ project(
   license: 'GPL3'
 )
 
-app_id = 'com.github.TERRsalt.' + meson.project_name()
+app_id = 'com.github.TERRsalt.Muzika'
 version = meson.project_version()
 
 gnome = import('gnome')

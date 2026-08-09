@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="muzika">
-  <schema id="@app_id@" path="/com/github/TERRsalt/muzika/">
+  <schema id="@app_id@" path="/com/github/TERRsalt/Muzika/">
     <key name="blur-mode" type="u">
       <range min="0" max="2"/>
       <default>1</default>

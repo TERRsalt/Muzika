@@ -5,7 +5,7 @@ namespace G4 {
         public const uint ART_ONLY = 2;
     }
 
-    [GtkTemplate (ui = "/com/github/TERRsalt/muzika/gtk/preferences.ui")]
+    [GtkTemplate (ui = "/com/github/TERRsalt/Muzika/gtk/preferences.ui")]
     public class PreferencesWindow : Adw.PreferencesWindow {
         [GtkChild]
         unowned Adw.ComboRow blur_row;
