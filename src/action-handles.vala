@@ -11,6 +11,7 @@ namespace G4 {
     public const string ACTION_PLAY_PAUSE = "play-pause";
     public const string ACTION_PREV = "prev";
     public const string ACTION_NEXT = "next";
+    public const string ACTION_ADD_THE_TAG = "add-the-tag";
     public const string ACTION_RANDOM_PLAY = "random-play";
     public const string ACTION_RELOAD = "reload";
     public const string ACTION_REMOVE = "remove";
@@ -52,6 +53,7 @@ namespace G4 {
                 { ACTION_PLAY_AT_NEXT, play_at_next, "s" },
                 { ACTION_PLAY_PAUSE, () => _app.play_pause () },
                 { ACTION_PREV, () => _app.play_previous () },
+                { ACTION_ADD_THE_TAG, () => show_add_the_tag (_app) },
                 { ACTION_PREFS, show_preferences },
                 { ACTION_RANDOM_PLAY, play_or_queue, "s" },
                 { ACTION_RELOAD, () => _app.reload_library () },
@@ -71,8 +73,9 @@ namespace G4 {
                 { ACTION_PLAY_PAUSE, "<primary>p" },
                 { ACTION_PREV, "<primary>Left" },
                 { ACTION_NEXT, "<primary>Right" },
+                { ACTION_ADD_THE_TAG, "<primary>t" },
                 { ACTION_RELOAD, "<primary>r" },
-                { ACTION_SHOW_TAGS_CURRENT, "<primary>t" },
+                { ACTION_SHOW_TAGS_CURRENT, "<primary>y" },
                 { ACTION_TOGGLE_SORT, "<primary>m" },
                 { ACTION_QUIT, "<primary>q" }
             };

@@ -1,6 +1,6 @@
 project(
   'muzika', [ 'vala', 'c' ],
-  version: '4.6.2',
+  version: '1.0',
   license: 'GPL3'
 )
 

@@ -9,6 +9,7 @@ namespace G4 {
         private Gtk.Button _prev = new Gtk.Button ();
         private Gtk.Button _play = new Gtk.Button ();
         private Gtk.Button _next = new Gtk.Button ();
+        private Gtk.Button _add_the_tag = new Gtk.Button ();
         private VolumeButton _volume = new VolumeButton ();
         private int _duration = 0;
         private int _position = 0;
@@ -63,6 +64,7 @@ namespace G4 {
             buttons.append (_prev);
             buttons.append (_play);
             buttons.append (_next);
+            buttons.append (_add_the_tag);
             buttons.append (_volume);
             append (buttons);
 
@@ -94,6 +96,12 @@ namespace G4 {
             _next.icon_name = "media-skip-forward-symbolic";
             _next.tooltip_text = _("Play Next");
             _next.add_css_class ("circular");
+
+            _add_the_tag.icon_name = "list-add-symbolic";
+            _add_the_tag.action_name = ACTION_APP + ACTION_ADD_THE_TAG;
+            _add_the_tag.valign = Gtk.Align.CENTER;
+            _add_the_tag.tooltip_text = _("Add the tag(s) to the music track");
+            _add_the_tag.add_css_class ("flat");
 
             _volume.valign = Gtk.Align.CENTER;
             player.bind_property ("volume", _volume, "value", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
@@ -229,3 +237,4 @@ namespace G4 {
         return controller;
     }
 }
+

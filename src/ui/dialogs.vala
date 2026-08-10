@@ -91,6 +91,76 @@ namespace G4 {
 #endif
     }
 
+    public void show_add_the_tag (Application app) {
+        var parent = Window.get_default ();
+
+        var win = new Adw.Window ();
+        win.default_width = 400;
+        win.default_height = 400;
+        win.title = "Add the tag(s) to the music track";
+
+        if (parent != null) win.transient_for = (!)parent;
+
+        var toolbar_view = new Adw.ToolbarView ();
+        var header_bar = new Adw.HeaderBar ();
+        toolbar_view.add_top_bar (header_bar);
+
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 8);
+        box.margin_top = -9;
+        box.margin_bottom = 0;
+        box.margin_start = 17;
+        box.margin_end = 17;
+
+        box.append (create_check_row_group ("Hour:", {"Morning", "Day", "Evening", "Night"}));
+
+        toolbar_view.content = box;
+
+        win.content = toolbar_view;
+
+        win.present ();
+    }
+
+    private Gtk.Label create_heading_label (string text) {
+        var label = new Gtk.Label (text);
+
+        label.add_css_class ("heading");
+        label.halign = Gtk.Align.START;
+        label.valign = Gtk.Align.START;
+
+        return label;
+    }
+
+    private Adw.PreferencesGroup create_check_row_group (string title, string[] tags) {
+        var group = new Adw.PreferencesGroup ();
+
+        group.title = title;
+        group.margin_top = 33;
+        group.margin_bottom = 0;
+        group.margin_start = 0;
+        group.margin_end = 0;
+
+        for (int i = 0; i < tags.length; i++) group.add (create_check_row (tags[i]));
+
+        return group;
+    }
+
+    private Adw.ActionRow create_check_row (string title) {
+        var row = new Adw.ActionRow ();
+        row.title = title;
+
+        var check_button = new Gtk.CheckButton ();
+        row.add_prefix (check_button);
+        row.activatable_widget = check_button;
+
+        return row;
+    }
+
+    private Adw.EntryRow create_entry_row (string title) {
+        var row = new Adw.EntryRow ();
+        row.title = title;
+        return row;
+    }
+
     public async bool show_alert_dialog (string text, Gtk.Window? parent = null) {
 #if ADW_1_5
         var result = false;
@@ -213,3 +283,4 @@ namespace G4 {
 #endif
     }
 }
+
