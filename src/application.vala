@@ -73,7 +73,7 @@ namespace G4 {
             settings.bind ("sort-mode", this, "sort-mode", SettingsBindFlags.DEFAULT);
             settings.bind ("monitor-changes", _loader, "monitor-changes", SettingsBindFlags.DEFAULT);
             settings.bind ("remote-thumbnail", _thumbnailer, "remote-thumbnail", SettingsBindFlags.DEFAULT);
-            settings.bind ("muzika-playback", _player, "muzika", SettingsBindFlags.DEFAULT);
+            settings.bind ("music-playback", _player, "muzika", SettingsBindFlags.DEFAULT);
             settings.bind ("replay-gain", _player, "replay-gain", SettingsBindFlags.DEFAULT);
             settings.bind ("audio-sink", _player, "audio-sink", SettingsBindFlags.DEFAULT);
             settings.bind ("volume", _player, "volume", SettingsBindFlags.DEFAULT);

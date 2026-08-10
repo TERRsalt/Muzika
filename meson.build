@@ -57,6 +57,7 @@ dependencies = [
   adw_dep,
   libm_dep,
   posix_dep,
+  dependency('json-glib-1.0'),
 ]
 
 subdir('data')

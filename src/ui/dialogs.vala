@@ -107,13 +107,19 @@ namespace G4 {
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 8);
         box.margin_top = -9;
-        box.margin_bottom = 0;
+        box.margin_bottom = 10;
         box.margin_start = 17;
         box.margin_end = 17;
 
-        box.append (create_check_row_group ("Hour:", {"Morning", "Day", "Evening", "Night"}));
+        box.append (create_check_row_group ("Hour tags:", {"Morning", "Day", "Evening", "Night"}));
+        box.append (create_check_row_group ("Date tags:", {"Spring", "Summer", "Fall", "Winter"}));
+        box.append (create_entry_row_group ("Other tags:", {"Tag name"}));
 
-        toolbar_view.content = box;
+        var scrolled = new Gtk.ScrolledWindow ();
+        scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
+
+        scrolled.child = box;
+        toolbar_view.content = scrolled;
 
         win.content = toolbar_view;
 
@@ -130,20 +136,6 @@ namespace G4 {
         return label;
     }
 
-    private Adw.PreferencesGroup create_check_row_group (string title, string[] tags) {
-        var group = new Adw.PreferencesGroup ();
-
-        group.title = title;
-        group.margin_top = 33;
-        group.margin_bottom = 0;
-        group.margin_start = 0;
-        group.margin_end = 0;
-
-        for (int i = 0; i < tags.length; i++) group.add (create_check_row (tags[i]));
-
-        return group;
-    }
-
     private Adw.ActionRow create_check_row (string title) {
         var row = new Adw.ActionRow ();
         row.title = title;
@@ -155,10 +147,38 @@ namespace G4 {
         return row;
     }
 
+    private Adw.PreferencesGroup create_check_row_group (string title, string[] tags) {
+        var group = new Adw.PreferencesGroup ();
+
+        group.title = title;
+        group.margin_top = 33;
+        group.margin_bottom = 10;
+        group.margin_start = 0;
+        group.margin_end = 0;
+
+        for (int i = 0; i < tags.length; i++) group.add (create_check_row (tags[i]));
+
+        return group;
+    }
+
     private Adw.EntryRow create_entry_row (string title) {
         var row = new Adw.EntryRow ();
         row.title = title;
         return row;
+    }
+
+    private Adw.PreferencesGroup create_entry_row_group (string title, string[] tags) {
+        var group = new Adw.PreferencesGroup ();
+
+        group.title = title;
+        group.margin_top = 33;
+        group.margin_bottom = 10;
+        group.margin_start = 0;
+        group.margin_end = 0;
+
+        for (int i = 0; i < tags.length; i++) group.add (create_entry_row (tags[i]));
+
+        return group;
     }
 
     public async bool show_alert_dialog (string text, Gtk.Window? parent = null) {

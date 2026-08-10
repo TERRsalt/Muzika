@@ -20,7 +20,7 @@
       <summary>Grid view for artists/albums</summary>
     </key>
     <key name="monitor-changes" type="b">
-      <default>false</default>
+      <default>true</default>
       <summary>Monitor local file changes</summary>
     </key>
     <key name="music-dir" type="s">
@@ -43,9 +43,9 @@
       <default>false</default>
       <summary>Keep playing after window closed</summary>
     </key>
-    <key name="muzika-playback" type="b">
+    <key name="music-playback" type="b">
       <default>true</default>
-      <summary>Enable muzika playback</summary>
+      <summary>Enable music playback</summary>
     </key>
     <key name="replay-gain" type="u">
       <range min="0" max="2"/>
@@ -53,11 +53,11 @@
       <summary>Normalize volume with ReplayGain</summary>
     </key>
     <key name="rotate-cover" type="b">
-      <default>true</default>
+      <default>false</default>
       <summary>Rotate album cover</summary>
     </key>
     <key name="peak-characters" type="s">
-      <default>'='</default>
+      <default>'·'</default>
       <summary>Peak characters</summary>
     </key>
     <key name="show-peak" type="b">
@@ -80,10 +80,10 @@
       <default>false</default>
     </key>
     <key name="width" type="i">
-      <default>800</default>
+      <default>1200</default>
     </key>
     <key name="height" type="i">
-      <default>600</default>
+      <default>750</default>
     </key>
     <key name="library-uri" type="s">
       <default>''</default>

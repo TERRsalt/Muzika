@@ -66,7 +66,7 @@ namespace G4 {
             replaygain_row.model = new Gtk.StringList ({_("Never"), _("Track"), _("Album")});
             settings.bind ("replay-gain", replaygain_row, "selected", SettingsBindFlags.DEFAULT);
 
-            settings.bind ("muzika-playback", muzika_btn, "active", SettingsBindFlags.DEFAULT);
+            settings.bind ("music-playback", muzika_btn, "active", SettingsBindFlags.DEFAULT);
 
             settings.bind ("show-peak", peak_row, "enable_expansion", SettingsBindFlags.DEFAULT);
             settings.bind ("peak-characters", peak_entry, "text", SettingsBindFlags.DEFAULT);
