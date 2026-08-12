@@ -30,6 +30,7 @@ sources = [
   'utils/data-io.vala',
   'utils/dir-cache.vala',
   'utils/dir-monitor.vala',
+  'utils/json.vala',
   'utils/mpris.vala',
   'utils/music.vala',
   'utils/music-library.vala',

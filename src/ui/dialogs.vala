@@ -113,7 +113,8 @@ namespace G4 {
 
         box.append (create_check_row_group ("Hour tags:", {"Morning", "Day", "Evening", "Night"}));
         box.append (create_check_row_group ("Date tags:", {"Spring", "Summer", "Fall", "Winter"}));
-        box.append (create_entry_row_group ("Other tags:", {"Tag name"}));
+        GLib.List<string> other_tags = read_tags_key ("other_tags");
+        box.append (create_tags_row_group ("Other tags:", "Enter the new tag's name", other_tags));
 
         var scrolled = new Gtk.ScrolledWindow ();
         scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
@@ -124,6 +125,20 @@ namespace G4 {
         win.content = toolbar_view;
 
         win.present ();
+    }
+
+    private Adw.PreferencesGroup create_tags_row_group (string title, string name_of_the_default_text, GLib.List<string> tags) {
+        var group = new Adw.PreferencesGroup ();
+
+        group.title = title;
+        group.margin_top = 33;
+        group.margin_bottom = 10;
+        group.margin_start = 0;
+        group.margin_end = 0;
+
+        group.add (create_entry_row (name_of_the_default_text));
+        foreach (var tag in tags) group.add (create_check_row (tag));
+        return group;
     }
 
     private Gtk.Label create_heading_label (string text) {
