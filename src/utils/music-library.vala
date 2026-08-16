@@ -536,7 +536,9 @@ namespace G4 {
             arr.add ((Music) store.get_item (pos));
         }
         sort_music_array (arr, sort_mode);
-        store.splice (0, count, (Object[]) arr.data);
+
+        for (var i = 0; i < count; i++) arr[i]._order = i;
+        store.sort ((a, b) => Music.compare_by_order ((Music) a, (Music) b));
     }
 
     public Playlist to_playlist (Music[] musics, string? title = null) {

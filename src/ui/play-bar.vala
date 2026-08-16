@@ -6,6 +6,7 @@ namespace G4 {
         private Gtk.Label _positive = new Gtk.Label ("0:00");
         private Gtk.Label _negative = new Gtk.Label ("0:00");
         private Gtk.ToggleButton _repeat = new Gtk.ToggleButton ();
+        private Gtk.Button _random = new Gtk.Button ();
         private Gtk.Button _prev = new Gtk.Button ();
         private Gtk.Button _play = new Gtk.Button ();
         private Gtk.Button _next = new Gtk.Button ();
@@ -61,6 +62,7 @@ namespace G4 {
             buttons.halign = Gtk.Align.CENTER;
             buttons.margin_top = 16;
             buttons.append (_repeat);
+            buttons.append (_random);
             buttons.append (_prev);
             buttons.append (_play);
             buttons.append (_next);
@@ -77,6 +79,12 @@ namespace G4 {
                 _repeat.icon_name = _repeat.active ? "media-playlist-repeat-song-symbolic" : "media-playlist-repeat-symbolic";
                 app.single_loop = ! app.single_loop;
             });
+
+            _random.valign = Gtk.Align.CENTER;
+            _random.icon_name = "media-playlist-shuffle-symbolic";
+            _random.tooltip_text = _("Shuffle Queue");
+            _random.add_css_class ("flat");
+            _random.clicked.connect (() => Window.get_default ()?.shuffle_current_page ());
 
             _prev.valign = Gtk.Align.CENTER;
             _prev.action_name = ACTION_APP + ACTION_PREV;
@@ -100,7 +108,7 @@ namespace G4 {
             _add_the_tag.icon_name = "list-add-symbolic";
             _add_the_tag.action_name = ACTION_APP + ACTION_ADD_THE_TAG;
             _add_the_tag.valign = Gtk.Align.CENTER;
-            _add_the_tag.tooltip_text = _("Add the tag(s) to the music track");
+            _add_the_tag.tooltip_text = _("Add the Tag(s)");
             _add_the_tag.add_css_class ("flat");
 
             _volume.valign = Gtk.Align.CENTER;

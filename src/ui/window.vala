@@ -121,6 +121,8 @@ namespace G4 {
             }
         }
 
+        public void shuffle_current_page () {_store_panel.shuffle_current_list ();}
+
         public void show_toast (string message, string? uri = null) {
             var toast = new Adw.Toast (message);
             if (uri != null) {

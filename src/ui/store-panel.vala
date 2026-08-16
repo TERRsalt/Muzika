@@ -206,6 +206,14 @@ namespace G4 {
             }
         }
 
+        public void shuffle_current_list () {
+            if (_current_list.playable) {
+                sort_music_store (_current_list.data_store, SortMode.SHUFFLE);
+                _current_list.modified = true;
+                play_current_list (0);
+            }
+        }
+
         public bool save_if_modified (bool prompt = true, VoidFunc? done = null) {
             if (_current_list != _main_list) {
                 _main_list.save_if_modified.begin (false, (obj, res) => _main_list.save_if_modified.end (res));
@@ -426,7 +434,7 @@ namespace G4 {
                 var split_btn = new Adw.SplitButton ();
                 split_btn.icon_name = "media-playback-start-symbolic";
                 split_btn.tooltip_text = _("Play");
-                split_btn.clicked.connect (() => open_page (build_library_uri (artist, album), true));
+                split_btn.clicked.connect (() => play_current_list ());
                 if (artist != null)
                     split_btn.menu_model = (album == null || album is Playlist) ? create_menu_for_artist ((!)artist) : create_menu_for_album ((!)album);
                 else if (album != null)
