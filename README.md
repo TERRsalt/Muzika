@@ -3,35 +3,10 @@
 # Muzika
 Play your music elegantly.
 
-<img src="https://github.com/TERRsalt/screenshots/-/raw/main/muzika/window.png" width="1134"/>
-<img src="https://github.com/TERRsalt/screenshots/-/raw/main/muzika/albums.png" width="1134"/>
-<img src="https://github.com/TERRsalt/screenshots/-/raw/main/muzika/playing.png" width="462"/>
-<img src="https://github.com/TERRsalt/screenshots/-/raw/main/muzika/playlist.png" width="466"/>
-
-Muzika (AKA: Muzika) is a light weight music player written in GTK4, focuses on large music collection.
+Muzika is a light weight music player written in GTK4, focuses on large music collection.
 
 ## Features
-- Supports most music file types, Samba and any other remote protocols (depends on GIO and GStreamer).
-- Fast loading and parsing thousands of music files in very few seconds, monitor local changes.
-- Low memory usage for large music collection with album covers (embedded and external), no thumbnail caches to store.
-- Group and sorts by album/artist/title, shuffle list, full-text searching.
-- Fluent adaptive user interface for different screen (Desktop, Tablet, Mobile).
-- Gaussian blurred cover as background, follows GNOME light/dark mode.
-- Supports creating and editing playlists, drag cover to change order or add to another playlist.
-- Supports drag and drop with other apps.
-- Supports audio peaks visualizer.
-- Supports muzika playback.
-- Supports normalizing volume with ReplayGain.
-- Supports specified audio sink.
-- Supports MPRIS control.
-
-## Install from Flathub
-<a href="https://flathub.org/apps/com.github.TERRsalt.Muzika">
-<img src="https://flathub.org/assets/badges/flathub-badge-en.png" width="240"/></a>
-
-## Install from Snapcraft (unofficial)
-<a href="https://snapcraft.io/muzika">
-<img alt="Get it from the Snap Store" src="https://camo.githubusercontent.com/ab077b20ad9938c23fbdac223ab101df5ed27329bbadbe7f98bfd62d5808f0a7/68747470733a2f2f736e617063726166742e696f2f7374617469632f696d616765732f6261646765732f656e2f736e61702d73746f72652d626c61636b2e737667" data-canonical-src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" width="240" style="max-width: 100%;"> 
+- TBA
 
 ## FreeBSD Dependencies
 
@@ -42,7 +17,7 @@ pkg install vala meson libadwaita gstreamer1-plugins-all gettext gtk4
 ## How to build 
 It is written in Vala, simple and clean code, with few third-party dependencies:
 
-1. Clone the code from gitlab.
+1. Clone the code from GitHub.
 2. Install vala, develop packages of gtk4, libadwaita, gstreamer.
 3. Run in the project directory:
 
