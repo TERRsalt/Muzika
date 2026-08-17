@@ -12,6 +12,8 @@ namespace G4 {
         private CrossFadePaintable _bkgnd_paintable = new CrossFadePaintable ();
         private Gdk.Paintable? _cover_paintable = null;
 
+        public static bool should_shuffle = true;
+
         public Window (Application app) {
             Object (application: app);
 
@@ -121,7 +123,10 @@ namespace G4 {
             }
         }
 
-        public void shuffle_current_page () {_store_panel.shuffle_current_list ();}
+        public void shuffle_current_page () {
+            if (should_shuffle) _store_panel.shuffle_current_list ();
+            else _store_panel.unshuffle_current_list ();
+        }
 
         public void show_toast (string message, string? uri = null) {
             var toast = new Adw.Toast (message);
@@ -364,3 +369,4 @@ namespace G4 {
         return files;
     }
 }
+

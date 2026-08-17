@@ -210,7 +210,15 @@ namespace G4 {
             if (_current_list.playable) {
                 sort_music_store (_current_list.data_store, SortMode.SHUFFLE);
                 _current_list.modified = true;
-                play_current_list (0);
+                //play_current_list (0);
+            }
+        }
+
+        public void unshuffle_current_list () {
+            if (_current_list.playable) {
+                var album = _current_list.music_node as Album;
+                if (album != null) ((!)album).overwrite_to (_current_list.data_store);
+                _current_list.modified = false;
             }
         }
 

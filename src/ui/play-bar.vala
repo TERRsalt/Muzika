@@ -6,7 +6,7 @@ namespace G4 {
         private Gtk.Label _positive = new Gtk.Label ("0:00");
         private Gtk.Label _negative = new Gtk.Label ("0:00");
         private Gtk.ToggleButton _repeat = new Gtk.ToggleButton ();
-        private Gtk.Button _random = new Gtk.Button ();
+        private Gtk.ToggleButton _random = new Gtk.ToggleButton ();
         private Gtk.Button _prev = new Gtk.Button ();
         private Gtk.Button _play = new Gtk.Button ();
         private Gtk.Button _next = new Gtk.Button ();
@@ -81,10 +81,14 @@ namespace G4 {
             });
 
             _random.valign = Gtk.Align.CENTER;
-            _random.icon_name = "media-playlist-shuffle-symbolic";
+            _random.icon_name = "media-playlist-consecutive-symbolic";
             _random.tooltip_text = _("Shuffle Queue");
             _random.add_css_class ("flat");
-            _random.clicked.connect (() => Window.get_default ()?.shuffle_current_page ());
+            _random.toggled.connect (() => {
+                _random.icon_name = _random.active ? "media-playlist-shuffle-symbolic" : "media-playlist-consecutive-symbolic";
+                Window.get_default ()?.shuffle_current_page ();
+                Window.should_shuffle = !Window.should_shuffle;
+            });
 
             _prev.valign = Gtk.Align.CENTER;
             _prev.action_name = ACTION_APP + ACTION_PREV;

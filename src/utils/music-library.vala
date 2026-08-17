@@ -189,7 +189,7 @@ namespace G4 {
 #endif
                 var count = items.length;
                 items.add (music);
-                items[count]._order = count;
+                items[count].order = count;
                 return true;
             }
             return false;
@@ -537,7 +537,7 @@ namespace G4 {
         }
         sort_music_array (arr, sort_mode);
 
-        for (var i = 0; i < count; i++) arr[i]._order = i;
+        for (var i = 0; i < count; i++) arr[i].order = i;
         store.sort ((a, b) => Music.compare_by_order ((Music) a, (Music) b));
     }
 

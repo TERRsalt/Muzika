@@ -23,7 +23,7 @@ namespace G4 {
         protected string _artist_key = "";
         protected string _title_key = "";
         private string? _cover_key = null;
-        public int _order = 0;
+        public int order = 0;
 
         public Music (string uri, string title, int64 time) {
             this.title = title;
@@ -275,7 +275,7 @@ namespace G4 {
         }
 
         public static int compare_by_order (Music s1, Music s2) {
-            return s1._order - s2._order;
+            return s1.order - s2.order;
         }
 
         public static int compare_by_recent (Music s1, Music s2) {
@@ -314,7 +314,7 @@ namespace G4 {
 
         public static void original_order (GenericArray<Music> arr) {
             for (var i = arr.length - 1; i >= 0; i--) {
-                arr[i]._order = i;
+                arr[i].order = i;
             }
         }
 
@@ -324,7 +324,7 @@ namespace G4 {
                 var s = arr[i];
                 arr[i] = arr[r];
                 arr[r] = s;
-                arr[i]._order = i;
+                arr[i].order = i;
             }
         }
     }
