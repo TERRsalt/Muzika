@@ -1,3 +1,5 @@
+README.md WIP
+
 <img align="left" alt="Project logo" src="data/icons/hicolor/scalable/apps/app.svg" />
 
 # Muzika
@@ -24,6 +26,3 @@ It is written in Vala, simple and clean code, with few third-party dependencies:
     `meson setup build --buildtype=release`
 
     `meson install -C build`
-
-## Change Log
-Check the [release tags](https://github.com/TERRsalt/Muzika/-/tags) for change log.
